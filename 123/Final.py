@@ -70,7 +70,7 @@ class Main(tk.Frame):
         
     # Добавление данных 
     def infomation(self, name, phone, email, salary):
-        self.db.insert_data(name, phone, email,salary )                                   #Вызвали функцию добавления данных в базу данных
+        self.db.insert_data(name, phone, email,salary )                                 =
         self.view_information() 
     
     # отображение в treeview
@@ -88,7 +88,7 @@ class Main(tk.Frame):
         
     # метод изменения данных о сотрудниках
     def update_information(self, name, phone, email, salary):
-        self.db.cur.execute(                                                         # Запрос на обновление
+        self.db.cur.execute(                                                       
             """UPDATE Employees SET name=?, phone=?, email=?, salary=? WHERE id=?""",
             (name, phone, email,salary, self.tree.set(self.tree.selection()[0], "#1")),
         )
@@ -104,7 +104,7 @@ class Main(tk.Frame):
             self.view_information()
     
     # вызов дочернего окна
-    def open_dialog(self):                                                              # Метод open_dialog
+    def open_dialog(self):                                                           
         Child()      
     
     # дочернее для редактированния данных
